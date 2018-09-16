@@ -13,7 +13,7 @@ use GameResult;
 
 /// A structure that contains gamepad state.
 pub struct GamepadContext {
-    pub(crate) gilrs: Gilrs,
+    //pub(crate) gilrs: Gilrs,
 }
 
 impl fmt::Debug for GamepadContext {
@@ -24,14 +24,15 @@ impl fmt::Debug for GamepadContext {
 
 impl GamepadContext {
     pub(crate) fn new() -> GameResult<GamepadContext> {
-        let gilrs = Gilrs::new()?;
-        Ok(GamepadContext { gilrs })
+        //let gilrs = Gilrs::new()?;
+        Ok(GamepadContext { /*gilrs*/ })
     }
 }
 
 /// returns the `Gamepad` associated with an id.
 pub fn gamepad(ctx: &Context, id: usize) -> Option<&Gamepad> {
-    ctx.gamepad_context.gilrs.get(id)
+    //ctx.gamepad_context.gilrs.get(id)
+    None
 }
 
 // Properties gamepads might want:

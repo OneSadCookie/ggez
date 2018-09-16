@@ -230,6 +230,7 @@ where
                 Event::Suspended(_) => (),
             }
         });
+        /*
         while let Some(gilrs::Event { id, event, .. }) = ctx.gamepad_context.gilrs.next_event() {
             match event {
                 gilrs::EventType::ButtonPressed(button, _) => {
@@ -244,6 +245,7 @@ where
                 _ => {}
             }
         }
+        */
         state.update(ctx)?;
         state.draw(ctx)?;
     }
